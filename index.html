@@ -1,14 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProDesk</title>
+
+  <link rel="stylesheet" href="./css/styles.css">
+
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: 'var(--color-primary)',
+            bg: 'var(--color-bg)',
+            text: 'var(--color-text)',
+            card: 'var(--color-card)',
+            border: 'var(--color-border)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .nav-link {
+      position: relative;
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+      right: 50%;
+      height: 2px;
+      background: var(--color-primary);
+      transition: left 0.3s ease, right 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+      left: 0;
+      right: 0;
+    }
+  </style>
 </head>
-<body>
-    <h1>
-        Prodesk IT-Solutions
-    </h1>
+
+<body class="bg-bg text-text transition-colors duration-300">
+
+  <nav id="navbar"
+    class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-4 md:px-10 h-[72px]">
+
+    <img src="./assets/prodesk_logo.png" class="w-28 mt-4" alt="logo">
+
+    <ul class="hidden md:flex items-center gap-8 text-sm font-semibold uppercase tracking-wide">
+      <li><a href="#" class="nav-link hover:text-primary transition">Home</a></li>
+      <li><a href="#" class="nav-link hover:text-primary transition">What we Provide</a></li>
+      <li><a href="#" class="nav-link hover:text-primary transition">Who we Are</a></li>
+    </ul>
+
+    <!-- Right side div -->
+    <div class="flex items-center gap-3">
+
+      <!-- sun and moon buttons -->
+      <button onclick="toggleTheme()"
+        class="w-10 h-10 flex items-center justify-center border border-border rounded-full text-text">
+        
+        <svg id="iconSun" class="w-5 h-5 hidden" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+        </svg>
+
+        <svg id="iconMoon" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+
+    
+      <button class="hidden md:block bg-primary text-white px-4 py-1.5 text-sm font-semibold rounded">
+        Contact
+      </button>
+
+      <!-- hamburger and cross icons  -->
+      <button onclick="toggleMenu()"
+        class="md:hidden w-10 h-10 flex items-center justify-center border border-border rounded text-text">
+
+        <svg id="menuIcon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+
+        <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24">
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+          <line x1="6" y1="18" x2="18" y2="6"></line>
+        </svg>
+
+      </button>
+
+    </div>
+  </nav>
+
+  <!-- mobile version menu div -->
+  <div id="mobileMenu"
+    class="fixed top-[72px] left-0 w-full bg-bg border-t border-border overflow-hidden max-h-0 transition-all duration-500">
+
+    <div class="flex flex-col items-center gap-6 py-6 text-lg font-medium">
+      <p>Home</p>
+      <p>What we Provide</p>
+      <p>Who we Are</p>
+
+      <button class="bg-primary text-white px-6 py-2 rounded">
+        Contact
+      </button>
+    </div>
+  </div>
+
+  <script src="./scripts/index.js"></script>
 </body>
 </html>

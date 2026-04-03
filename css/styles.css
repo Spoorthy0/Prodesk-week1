@@ -1,0 +1,21 @@
+/* Light  mode variables*/
+:root {
+  --color-primary: #C9A84C;   /* gold */
+
+  --color-bg: #FAF7F0;        /* warm off-white */
+  --color-text: #3B2F1B;      /* deep brown */
+
+  --color-card: #FFFFFF;      
+  --color-border: #E6D8A8;    /* soft gold border */
+}
+
+/* darkk mode variables */
+.dark {
+  --color-primary: #D4AF37;   /* rich gold */
+
+  --color-bg: #0F0D0A;        /* dark brown/black */
+  --color-text: #F5E6C8;      /* warm cream */
+
+  --color-card: #1A1611;      
+  --color-border: #3A2F1D;    /* muted brown border */
+}
