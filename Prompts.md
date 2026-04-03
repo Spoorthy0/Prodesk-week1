@@ -1,0 +1,1 @@
+##### prompt 1: I have used tailwindcss with react. but now i want to use it with plain html file. guide me to set up the tailwindcss using cdn.
