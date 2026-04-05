@@ -1,21 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.html{
+  font-family: 'Poppins', sans-serif;
+}
+
+    
+    .nav-link {
+      position: relative;
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+      right: 50%;
+      height: 2px;
+      background: var(--color-primary);
+      transition: left 0.3s ease, right 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+      left: 0;
+      right: 0;
+    }
+
 /* Light  mode variables*/
 :root {
-  --color-primary: #C9A84C;   /* gold */
+  --color-primary: #C9A84C;   
 
-  --color-bg: #FAF7F0;        /* warm off-white */
-  --color-text: #3B2F1B;      /* deep brown */
+  --color-bg: #FAF7F0;        
+  --color-text: #3B2F1B;      
 
   --color-card: #FFFFFF;      
-  --color-border: #E6D8A8;    /* soft gold border */
+  --color-border: #E6D8A8;    
 }
 
 /* darkk mode variables */
 .dark {
-  --color-primary: #D4AF37;   /* rich gold */
+  --color-primary: #D4AF37;  
 
-  --color-bg: #0F0D0A;        /* dark brown/black */
-  --color-text: #F5E6C8;      /* warm cream */
+  --color-bg: #0F0D0A;        
+  --color-text: #F5E6C8;      
 
   --color-card: #1A1611;      
-  --color-border: #3A2F1D;    /* muted brown border */
+  --color-border: #3A2F1D;    
 }
+

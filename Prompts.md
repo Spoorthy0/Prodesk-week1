@@ -5,3 +5,7 @@
 
 
 ##### While using icons for hamburger menu and Cross in order to make the responsive layout. the images for the icons are blurry. generate svg icons for both icons hamburger menu and "X" for both light and dark modes
+
+###### Give me clip-path for hexagon shape
+
+###### Measures or tips to improve accesibility and performance score. 
